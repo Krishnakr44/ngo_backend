@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
 require("dotenv").config(); // Load variables from .env file
-app.use("/uploads", express.static("uploads")); // Serve static files from the 'uploads' directory
+app.use("/uploads", express.static("../uploads")); // Serve static files from the 'uploads' directory
 app.use(cors()); // Allow requests from all origins
 
 app.use(express.json()); // JSON parsing middleware

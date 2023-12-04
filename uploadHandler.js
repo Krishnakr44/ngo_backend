@@ -6,7 +6,7 @@ const Image = require("./imageSchema"); // Import the Image model/schema
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, __dirname + "uploads/"); // Adjust the path to an absolute path
+    cb(null, __dirname + "../uploads/"); // Adjust the path to an absolute path
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + "-" + file.originalname);
